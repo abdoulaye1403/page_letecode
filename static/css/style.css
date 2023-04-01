@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  font-family: 'Roboto', sans-serif;
+}
+
+.header{
+  display: flex;
+  position: relative;
+  height: 60px;
+  width: 100%;
+  background-color: rgb(16, 36, 54);
+}
+
+.header .left{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 5px;
+  left: 100px;
+}
+
+.logo img{
+  margin-top: 5px;
+  margin-right: 5px;
+  width: 50px;
+  height: 50px;
+}
+
+.left  span{
+  color: #fff;
+  font-size: 20px;
+}
+
+.header .right{
+  display: flex;
+  position: absolute;
+  top: 10px;
+  right: 100px;
+}
+
+.navbar ul{
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.navbar ul li{
+  margin: 12px;
+}
+.navbar ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 100;
+}
+.navbar ul li a:hover{
+  color: #00BFFF	;
+  text-decoration: underline;
+  font-size: 18px;
+  font-weight: 200; 
+}
+.hamburger {
+  display: none;
+  width: 40px;
+  height: 30px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  cursor: pointer;
+}
+
+.line {
+  display: block;
+  height: 3px;
+  width: 100%;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  margin-top: -1px;
+}
+
+.line:nth-child(1) {
+  transform: translateY(-8px);
+}
+
+.line:nth-child(2) {
+  transform: translateY(0px);
+}
+
+.line:nth-child(3) {
+  transform: translateY(8px);
+}
+
+.containe{
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  margin-bottom: 20px;
+}
+
+.containe .title{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.title h1{
+  display: inline-block;
+  margin-block-start:1em;
+  margin-block-end:0;
+  font-size: 1.8em;
+}
+
+.title p{
+  font-size: 16px;
+}
+
+.styled{
+border: 0;
+outline: none;
+line-height: 2.5;
+padding: 0 20px;
+font-size: 1rem;
+text-align: center;
+color: #fff;
+border-radius: 10px;
+background-color: #C71585	;
+}
+
+.styled:hover {
+background-color: #00BFFF	;
+}
+
+.centre{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  margin-top: 30px;
+  background-color: #DCDCDC;
+  height: 185px;
+}
+
+.centre-left{
+    text-align: right;
+    margin-right: 90px;
+}
+
+.centre-left img{
+  margin-bottom: 20px;
+  width: 300px;
+  height: 200px;
+  float: right;
+}
+
+.centre .centre-right{
+  display: flex;
+  flex-direction: column;
+}
+
+.centre-right p,h2{
+  margin-block-start: 1em;
+  margin-block-end: 0;
+}
+
+.centre-right p{
+  margin-right: 150px;
+  font-size: 15px;
+}
+
+.containe .propos{
+  display: flex;
+  flex-direction: column;
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+.propos ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.propos li p{
+  font-size: 20px;
+}
+
+.footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 120px;
+  background-color: rgb(16, 36, 54);
+}
+.footer p{
+  color: #fff;
+}
+
+@media screen and (min-width: 0) and (max-width: 640px) 
+{
+  .header .left{
+    top: 0px;
+    left: 15px;
+  }
+  .header .right{
+    display: none;
+  } 
+  
+  .header .hamburger{
+    display: block;
+
+  }
+
+  .title h1{
+    font-size: 1.5em;
+  }
+
+  .title p{
+    font-size: 12px;
+  }
+
+  .centre{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: #DCDCDC;
+    height: 170px;
+  }
+  .centre .centre-left{
+    display: none;
+  } 
+
+  .centre-right h2{
+    font-size: 12;
+    text-align: center;
+  }
+  .centre .centre-right p{
+    margin: 10px;
+    font-size: 12px;
+    text-align: center;
+  }
+  
+  .containe .propos{
+    display: flex;
+    flex-direction: column;
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+  .propos p{
+    font-size: 12px;
+  }
+    
+}
+
+@media screen and (min-width: 641px) and (max-width: 899px) 
+{
+  .header .left{
+    top: 0;
+    left: 20px;
+  }
+  
+  .header .right{
+    right: 20px;
+  }
+
+  .title h1{
+    font-size: 1.5em;
+  }
+
+  .title p{
+    font-size: 12px;
+  }
+
+  .centre{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    background-color: #DCDCDC;
+    height: 180px;
+  }
+  .centre .centre-left{
+    display: none;
+  } 
+
+  .centre-right h2{
+    font-size: 15;
+    text-align: center;
+  }
+  .centre .centre-right p{
+    margin: 10px;
+    font-size: 18px;
+    text-align: center;
+  }
+  
+  .containe .propos{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .propos p{
+    font-size: 18px;
+  }
+    
+}
+
+@media screen and (min-width: 900px) and (max-width: 1024px) 
+{
+
+  .centre{
+    height:250px;
+  }
+
+  .centre-left img{
+    margin-top: 5px;
+    width: 400px;
+    height: 250px;
+  }
+
+  .centre-right h2{
+    margin: 10px;
+    font-size: 20px;
+    text-align: left;
+  }
+  .centre .centre-right p{
+    margin: 10px;
+    font-size: 20px;
+    text-align: left;
+  }
+  
+  .containe .propos{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+    margin-left: 45px;
+    margin-right: 45px;
+  }
+  .propos p{
+    font-size: 28px;
+  }
+    
+}
+
+
+
